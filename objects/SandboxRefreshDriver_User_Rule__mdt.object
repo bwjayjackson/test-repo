@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Mode__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Mode</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active Users</fullName>
+                    <default>true</default>
+                    <label>Active Users</label>
+                </value>
+                <value>
+                    <fullName>CSV Static Resource</fullName>
+                    <default>false</default>
+                    <label>CSV Static Resource</label>
+                </value>
+                <value>
+                    <fullName>Use Custom Metadata Data Load</fullName>
+                    <default>false</default>
+                    <label>Use Custom Metadata Data Load</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Order__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Revert_Email_Address__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Revert Email Address</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SandboxRefreshDriver_Sandbox__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>SandboxRefreshDriver Sandbox</label>
+        <referenceTo>SandboxRefreshDriver_Sandbox__mdt</referenceTo>
+        <relationshipLabel>SandboxRefreshDriver User Rules</relationshipLabel>
+        <relationshipName>SandboxRefreshDriver_User_Rules</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <label>SandboxRefreshDriver User Rule</label>
+    <pluralLabel>SandboxRefreshDriver User Rules</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>
