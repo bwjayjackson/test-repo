@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Allows a user to submit system feedback, whether it&apos;s an issue experienced or a new feature desired.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Backlog__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The backlog item related to this feedback.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The backlog item related to this feedback.</inlineHelpText>
+        <label>Backlog Item</label>
+        <referenceTo>Backlog__c</referenceTo>
+        <relationshipLabel>Feedback</relationshipLabel>
+        <relationshipName>Feedback</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Details__c</fullName>
+        <description>Provide more in-depth detail related to your feedback.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide more in-depth detail related to your feedback.</inlineHelpText>
+        <label>Details</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Persona__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Indicate the persona, which gives the user&apos;s perspective. Who is it that wants/needs this feature to be implemented?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicate the persona, which gives the user&apos;s perspective. Who is it that wants/needs this feature to be implemented?</inlineHelpText>
+        <label>As a(n)</label>
+        <referenceTo>Persona__c</referenceTo>
+        <relationshipLabel>Feedback</relationshipLabel>
+        <relationshipName>Feedback</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <description>How important is this feedback?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tell us how important this feedback is.</inlineHelpText>
+        <label>Priority</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>P1 - Blocking My Work</fullName>
+                    <default>false</default>
+                    <label>P1 - Blocking My Work</label>
+                </value>
+                <value>
+                    <fullName>P2 - Using Workaround</fullName>
+                    <default>false</default>
+                    <label>P2 - Using Workaround</label>
+                </value>
+                <value>
+                    <fullName>P3 - No Impact on My Work</fullName>
+                    <default>false</default>
+                    <label>P3 - No Impact on My Work</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Screenshots__c</fullName>
+        <description>Provide any screenshots or other images (with captions, if you&apos;d like) related to your issue.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide any screenshots or other images (with captions, if you&apos;d like) related to your issue.</inlineHelpText>
+        <label>Screenshots</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Steps_to_Reproduce__c</fullName>
+        <description>Provide a list of (preferably detailed and unambiguous) steps that a developer can follow to reliably reproduce your issue.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide a list of (preferably detailed and unambiguous) steps that a developer can follow to reliably reproduce your issue.</inlineHelpText>
+        <label>Steps to Reproduce</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Submitted_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Who is submitting this feedback?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tell us who is submitting this feedback.</inlineHelpText>
+        <label>Submitted By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Feedback</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Title__c</fullName>
+        <description>Short summary of the feedback item.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a short summary of the feedback item.</inlineHelpText>
+        <label>Title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Goal__c</fullName>
+        <description>What is the user&apos;s goal?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tell us what your goal is.</inlineHelpText>
+        <label>I need</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>User_Reason__c</fullName>
+        <description>Why should this feature be implemented?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tell us why this feature should be implemented.</inlineHelpText>
+        <label>So that</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Feedback</label>
+    <nameField>
+        <displayFormat>FB-{00000}</displayFormat>
+        <label>Feedback Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Feedback</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Feature</fullName>
+        <active>true</active>
+        <description>Allows users to contribute feature requests to improve the system.</description>
+        <label>Feature</label>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>P1 - Blocking My Work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>P2 - Using Workaround</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>P3 - No Impact on My Work</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Issue</fullName>
+        <active>true</active>
+        <description>Allows users to identify issues existing within the system.</description>
+        <label>Issue</label>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>P1 - Blocking My Work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>P2 - Using Workaround</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>P3 - No Impact on My Work</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Create_Backlog_Item</fullName>
+        <availability>online</availability>
+        <description>Creates a backlog item from this Feedback</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Backlog Item</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+// Change this in managed package!
+var NamespacePrefix = &apos;&apos;;
+
+var response = JSON.parse(sforce.apex.execute(
+    NamespacePrefix + &quot;FeedbackSoapService&quot;,
+    &quot;createBacklogItem&quot;,
+    {feedbackId:&quot;{!Feedback__c.Id}&quot;})); 
+
+if (response.success) { 
+    window.location.reload(); 
+} 
+else { 
+    alert(&quot;Backlog creation failed!\n&quot; + response.message); 
+}</url>
+    </webLinks>
+</CustomObject>
